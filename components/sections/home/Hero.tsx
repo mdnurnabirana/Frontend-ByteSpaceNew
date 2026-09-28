@@ -5,12 +5,12 @@ import Container from "@/components/ui/Container";
 import { studentAvatars } from "@/constants/avatars";
 
 const ornaments = [
-  { src: "/images/ornaments/zigzag-lime.png", left: -122, top: 221, size: 389 },
-  { src: "/images/ornaments/zigzag-gray.png", left: 183, top: 477, size: 177 },
-  { src: "/images/ornaments/torus-gray.png", left: 14, top: 681, size: 346 },
-  { src: "/images/ornaments/cylinder-lime.png", left: 1227, top: 220, size: 374 },
-  { src: "/images/ornaments/pyramid-gray.png", left: 1104, top: 464, size: 190 },
-  { src: "/images/ornaments/spring-gray.png", left: 1124, top: 672, size: 334 },
+  { src: "/images/ornaments/zigzag-lime.png", left: -122, top: 221, width: 389, height: 387 },
+  { src: "/images/ornaments/zigzag-gray.png", left: 183, top: 477, width: 177, height: 176 },
+  { src: "/images/ornaments/torus-gray.png", left: 14, top: 681, width: 346, height: 344 },
+  { src: "/images/ornaments/cylinder-lime.png", left: 1227, top: 220, width: 374, height: 372 },
+  { src: "/images/ornaments/pyramid-gray.png", left: 1104, top: 464, width: 190, height: 189 },
+  { src: "/images/ornaments/spring-gray.png", left: 1124, top: 672, width: 334, height: 332 },
 ];
 
 function ProgressCard() {
@@ -89,8 +89,8 @@ export default function Hero() {
             key={ornament.src}
             src={ornament.src}
             alt=""
-            width={ornament.size}
-            height={ornament.size}
+            width={ornament.width}
+            height={ornament.height}
             className="absolute"
             style={{ left: ornament.left, top: ornament.top }}
           />
