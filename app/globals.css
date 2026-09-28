@@ -51,17 +51,10 @@ button {
     linear-gradient(to right, rgba(255, 255, 255, 0.12) 2px, transparent 2px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 2px, transparent 2px);
   background-size: 120px 120px;
-  background-position: -1px -1px;
+  background-position: calc(50% + 59px) -1px;
 }
 
 .float-shadow {
-  box-shadow:
-    0.5px 0.7px 3px rgba(0, 0, 0, 0.04),
-    2.2px 3.2px 5.7px rgba(0, 0, 0, 0.06),
-    5.4px 7.7px 9.6px rgba(0, 0, 0, 0.07),
-    10.2px 14.6px 16px rgba(0, 0, 0, 0.08),
-    17px 24.2px 24px rgba(0, 0, 0, 0.09),
-    25.8px 36.9px 36px rgba(0, 0, 0, 0.1),
-    37.1px 53px 56px rgba(0, 0, 0, 0.105),
-    51px 72.9px 72px rgba(0, 0, 0, 0.13);
+  filter: drop-shadow(2px 3px 6px rgba(0, 0, 0, 0.06)) drop-shadow(10px 15px 16px rgba(0, 0, 0, 0.08))
+    drop-shadow(26px 37px 36px rgba(0, 0, 0, 0.1)) drop-shadow(51px 73px 72px rgba(0, 0, 0, 0.13));
 }
