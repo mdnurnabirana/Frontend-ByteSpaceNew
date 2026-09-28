@@ -1,8 +1,8 @@
 import Image from "next/image";
-import AvatarGroup from "@/components/shared/AvatarGroup";
+import ProgressCard from "@/components/shared/ProgressCard";
+import StudentsCard from "@/components/shared/StudentsCard";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import { studentAvatars } from "@/constants/avatars";
 
 const ornaments = [
   { src: "/images/ornaments/zigzag-lime.png", left: -122, top: 221, width: 389, height: 387 },
@@ -12,43 +12,6 @@ const ornaments = [
   { src: "/images/ornaments/pyramid-gray.png", left: 1104, top: 464, width: 190, height: 189 },
   { src: "/images/ornaments/spring-gray.png", left: 1124, top: 672, width: 334, height: 332 },
 ];
-
-function ProgressCard() {
-  return (
-    <div className="flex w-[232px] flex-col gap-2 rounded-2xl bg-white p-4 backdrop-blur-[20px]">
-      <p className="text-body-s leading-[1.2] font-medium text-gray-950">Learning Progress</p>
-      <p className="font-poppins text-5xl leading-[1.2] font-semibold tracking-[-0.01em] text-gray-950">
-        55%
-      </p>
-      <div className="h-2 w-[200px] rounded-3xl bg-smoke">
-        <div className="h-2 w-[112px] rounded-3xl bg-lime" />
-      </div>
-    </div>
-  );
-}
-
-function StudentsCard() {
-  return (
-    <div className="flex w-[258px] flex-col gap-2 rounded-2xl bg-white p-4 backdrop-blur-[20px]">
-      <div>
-        <p className="text-body-m leading-[1.2] font-medium text-gray-950">Happy Students</p>
-        <div className="flex items-center">
-          <p className="text-body-xs leading-[1.6] text-gray-950">
-            4.5 <span className="text-gray-400">(240)</span>
-          </p>
-          <Image src="/icons/star-small.svg" alt="" width={16} height={16} className="p-px" />
-        </div>
-      </div>
-      <AvatarGroup
-        images={studentAvatars}
-        size={43}
-        overlap={16}
-        countLabel="2K+"
-        countClassName="bg-lime text-xs leading-[1.5] font-bold text-gray-950"
-      />
-    </div>
-  );
-}
 
 function CategoryBadge() {
   return (
