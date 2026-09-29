@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import CareerGrowth from "@/components/sections/home/CareerGrowth";
 import CreatorCta from "@/components/sections/home/CreatorCta";
@@ -20,6 +21,7 @@ export default function Home() {
         <CreatorCta />
         <Testimonials />
       </main>
+      <Footer />
     </>
   );
 }
