@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -8,21 +7,21 @@ import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 import { emailPattern } from "@/constants/validation";
 
-const socialLogins = [
-  { name: "Facebook", icon: "/icons/facebook.svg" },
-  { name: "Google", icon: "/icons/google.svg" },
-];
-
-export default function LoginForm() {
+export default function RegisterForm() {
   const router = useRouter();
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({ email: "", password: "" });
+  const [errors, setErrors] = useState({ name: "", email: "", password: "" });
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const newErrors = { email: "", password: "" };
+    const newErrors = { name: "", email: "", password: "" };
+
+    if (!name.trim()) {
+      newErrors.name = "Full name is required";
+    }
 
     if (!email) {
       newErrors.email = "Email is required";
@@ -38,22 +37,30 @@ export default function LoginForm() {
 
     setErrors(newErrors);
 
-    if (!newErrors.email && !newErrors.password) {
-      router.push("/");
+    if (!newErrors.name && !newErrors.email && !newErrors.password) {
+      router.push("/login");
     }
   }
 
   return (
-    <div className="flex h-full flex-col justify-between gap-12">
+    <div className="flex flex-col gap-12 lg:gap-[122px]">
       <form noValidate onSubmit={handleSubmit} className="flex flex-col gap-10">
         <div>
-          <p className="text-body-l leading-[1.6] text-primary">Sign In</p>
+          <p className="text-body-l leading-[1.6] text-primary">Create an Account</p>
           <h1 className="font-poppins text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-gray-950 sm:text-[40px] lg:text-heading-m">
-            Welcome Back
+            Welcome to ByteSpace
           </h1>
         </div>
 
         <div className="flex flex-col gap-6">
+          <Input
+            label="Full Name"
+            name="name"
+            placeholder="Jamie Davis"
+            value={name}
+            onChange={setName}
+            error={errors.name}
+          />
           <Input
             label="Email"
             name="email"
@@ -73,35 +80,15 @@ export default function LoginForm() {
             error={errors.password}
           />
           <div className="flex justify-end">
-            <Button type="submit">Sign In</Button>
+            <Button type="submit">Continue</Button>
           </div>
         </div>
       </form>
 
-      <div className="flex flex-col items-center gap-10">
-        <div className="flex w-full items-center gap-[11px]">
-          <span className="h-px max-w-[200px] flex-1 bg-silver" />
-          <span className="text-body-l leading-[1.6] text-dim">or</span>
-          <span className="h-px max-w-[200px] flex-1 bg-silver" />
-        </div>
-        <div className="flex gap-4">
-          {socialLogins.map((social) => (
-            <button
-              key={social.name}
-              type="button"
-              aria-label={`Sign in with ${social.name}`}
-              className="flex h-[72px] w-[72px] items-center justify-center rounded-3xl border border-silver transition-colors hover:bg-gray-50"
-            >
-              <Image src={social.icon} alt="" width={40} height={40} />
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <p className="text-center text-body-m leading-[1.6] text-dim">
-        New user?{" "}
-        <Link href="/register" className="text-primary hover:underline">
-          Create an account
+      <p className="text-center text-body-m leading-[1.6] text-gray-700">
+        Already have an account?{" "}
+        <Link href="/login" className="text-primary hover:underline">
+          Login
         </Link>
       </p>
     </div>
