@@ -4,7 +4,7 @@ import { testimonials } from "@/constants/testimonials";
 
 export default function Testimonials() {
   return (
-    <section className="bg-snow bg-[url(/images/backgrounds/testimonials-glow.webp)] bg-[length:max(100%,1440px)_100%] bg-center bg-no-repeat py-20 lg:pt-[74px] lg:pb-[57px]">
+    <section className="bg-snow bg-[url(/images/backgrounds/testimonials-glow.webp)] bg-[length:max(100%,1440px)_100%] bg-center bg-no-repeat py-20 lg:pt-[74px] lg:pb-[60px]">
       <Container>
         <div className="flex flex-col gap-12 lg:-mx-0.5 lg:gap-[72px]">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:gap-[43px]">
