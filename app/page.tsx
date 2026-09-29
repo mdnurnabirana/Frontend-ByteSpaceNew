@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import CareerGrowth from "@/components/sections/home/CareerGrowth";
+import CreatorCta from "@/components/sections/home/CreatorCta";
 import DiscoverCourses from "@/components/sections/home/DiscoverCourses";
 import Hero from "@/components/sections/home/Hero";
 import LearningPaths from "@/components/sections/home/LearningPaths";
@@ -15,6 +16,7 @@ export default function Home() {
         <DiscoverCourses />
         <LearningPaths />
         <CareerGrowth />
+        <CreatorCta />
       </main>
     </>
   );
