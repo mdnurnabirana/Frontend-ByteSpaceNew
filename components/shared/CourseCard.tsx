@@ -5,12 +5,12 @@ import { courseAvatars } from "@/constants/avatars";
 type CourseCardProps = {
   title: string;
   image: string;
-  dark?: boolean;
+  featured?: boolean;
 };
 
 const details = ["17 Lessons", "2 hours 16 mins", "59 Comments"];
 
-export default function CourseCard({ title, image, dark = false }: CourseCardProps) {
+export default function CourseCard({ title, image, featured = false }: CourseCardProps) {
   return (
     <div className="w-full max-w-[373px] rounded-3xl border border-gray-200 bg-white p-[15px] pb-5">
       <div className="relative h-[195px] overflow-hidden rounded-xl bg-[#443131]">
@@ -19,7 +19,7 @@ export default function CourseCard({ title, image, dark = false }: CourseCardPro
           {details.map((detail) => (
             <span
               key={detail}
-              className="rounded-3xl bg-smoke/60 px-3 py-1.5 text-body-xs leading-[1.2] font-medium whitespace-nowrap text-graphite backdrop-blur-[8px]"
+              className={`rounded-3xl bg-smoke/60 px-3 py-1.5 text-body-xs font-medium whitespace-nowrap text-graphite backdrop-blur-[8px] ${featured ? "leading-5" : "leading-[1.2]"}`}
             >
               {detail}
             </span>
@@ -30,10 +30,12 @@ export default function CourseCard({ title, image, dark = false }: CourseCardPro
       <div className="mt-[21px] flex justify-between gap-2">
         <div className="flex min-w-0 flex-col gap-4">
           <div>
-            <h3 className="max-w-[280px] truncate font-poppins text-heading-xs leading-[1.2] font-semibold tracking-[-0.01em] text-black">
+            <h3
+              className={`max-w-[280px] truncate font-poppins text-heading-xs font-semibold tracking-[-0.01em] text-black ${featured ? "leading-7" : "leading-[1.2]"}`}
+            >
               {title}
             </h3>
-            <p className="text-body-xs leading-[1.6] text-graphite">
+            <p className={`text-body-xs text-graphite ${featured ? "leading-5" : "leading-[1.6]"}`}>
               by <span className="text-primary">purepearl studio</span>
             </p>
           </div>
@@ -48,7 +50,7 @@ export default function CourseCard({ title, image, dark = false }: CourseCardPro
               size={32}
               overlap={8}
               countLabel="26+"
-              countClassName={`text-body-xs leading-5 font-medium ${dark ? "bg-black text-white" : "bg-lime text-gray-950"}`}
+              countClassName={`text-body-xs leading-5 font-medium ${featured ? "bg-black text-white" : "bg-lime text-gray-950"}`}
             />
           </div>
 
@@ -61,9 +63,13 @@ export default function CourseCard({ title, image, dark = false }: CourseCardPro
         </div>
 
         <div className="flex shrink-0 items-center self-start">
-          <span className="text-body-l leading-[1.6] text-graphite">4.5 </span>
+          <span
+            className={`text-body-l text-graphite ${featured ? "leading-7 font-medium" : "leading-[1.6]"}`}
+          >
+            4.5{" "}
+          </span>
           <Image
-            src={dark ? "/icons/star-filled.svg" : "/icons/star-outline.svg"}
+            src={featured ? "/icons/star-filled.svg" : "/icons/star-outline.svg"}
             alt=""
             width={24}
             height={24}
