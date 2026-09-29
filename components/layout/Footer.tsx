@@ -33,25 +33,20 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 xl:flex">
-            {footerColumns.map((column, index) => (
-              <div key={index} className="flex flex-col gap-6 xl:w-[167px]">
-                {column.title && (
-                  <h4 className="text-body-m leading-6 text-black">{column.title}</h4>
-                )}
-                <ul className={`flex flex-col gap-4 ${column.title ? "" : "sm:mt-12"}`}>
-                  {column.links.map((link) => (
-                    <li key={link}>
-                      <Link
-                        href="#"
-                        className="block text-body-s leading-[1.6] text-gray-950 hover:text-primary"
-                      >
-                        {link}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 xl:mt-12 xl:flex">
+            {footerColumns.map((links, index) => (
+              <ul key={index} className="flex flex-col gap-4 xl:w-[167px]">
+                {links.map((link) => (
+                  <li key={link}>
+                    <Link
+                      href="#"
+                      className="block text-body-s leading-[1.6] text-gray-950 hover:text-primary"
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             ))}
           </div>
         </div>
