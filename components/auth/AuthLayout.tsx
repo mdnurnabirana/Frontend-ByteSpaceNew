@@ -17,7 +17,7 @@ export default function AuthLayout({ title, description, children }: AuthLayoutP
     <main className="relative min-h-screen overflow-hidden bg-primary lg:min-h-[1024px]">
       <div className="grid-lines absolute inset-0" />
 
-      <div className="absolute top-0 left-1/2 hidden h-[1024px] w-[1440px] -translate-x-1/2 lg:block">
+      <div className="absolute top-0 left-1/2 hidden h-[1024px] w-[1440px] -translate-x-1/2 xl:block">
         <div className="absolute top-[394px] left-[122px]">
           <CourseCard title="Build Digital Asset" image="/images/courses/digital-asset.jpg" featured />
         </div>
