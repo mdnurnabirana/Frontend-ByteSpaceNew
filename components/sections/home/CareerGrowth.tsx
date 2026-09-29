@@ -37,11 +37,11 @@ function RevenueCard({ title, period, amount, showBar = false }: RevenueCardProp
 
 export default function CareerGrowth() {
   return (
-    <section className="overflow-hidden bg-snow bg-[url(/images/backgrounds/growth-glow.webp)] bg-[length:max(100%,1440px)_100%] bg-center bg-no-repeat py-20 lg:py-[120px]">
+    <section className="overflow-hidden bg-snow bg-[url(/images/backgrounds/growth-glow.webp)] bg-[length:max(100%,1440px)_100%] bg-center bg-no-repeat py-20 xl:py-[120px]">
       <Container>
-        <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-[63px] lg:pl-px">
-          <div className="flex w-full flex-col gap-8 lg:w-[574px] lg:shrink-0 lg:gap-10">
-            <h2 className="max-w-[577px] font-poppins text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-gray-950 sm:text-[40px] lg:text-heading-m">
+        <div className="flex flex-col items-center gap-12 xl:flex-row xl:gap-[63px] xl:pl-px">
+          <div className="flex w-full flex-col gap-8 xl:w-[574px] xl:shrink-0 xl:gap-10">
+            <h2 className="max-w-[577px] font-poppins text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-gray-950 sm:text-[40px] xl:text-heading-m">
               Your Path to Professional Growth Starts Here!
             </h2>
             <p className="max-w-[477px] text-body-m leading-[1.6] text-gray-700 sm:text-body-l">
@@ -92,7 +92,7 @@ export default function CareerGrowth() {
           />
         </div>
 
-        <div className="mt-20 flex flex-col-reverse items-center gap-12 lg:mt-[72px] lg:flex-row lg:gap-[79px] lg:pl-px">
+        <div className="mt-20 flex flex-col-reverse items-center gap-12 xl:mt-[72px] xl:flex-row xl:gap-[79px] xl:pl-px">
           <div className="relative hidden h-[596px] w-[541px] shrink-0 md:block">
             <div className="absolute top-11 left-0 w-[232px]">
               <RevenueCard title="Total Revenue" period="July 1-28" amount="$120.29" showBar />
@@ -129,8 +129,8 @@ export default function CareerGrowth() {
             className="h-auto w-full max-w-[420px] md:hidden"
           />
 
-          <div className="flex w-full flex-col gap-8 lg:w-[580px] lg:gap-10">
-            <h2 className="max-w-[391px] font-poppins text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-gray-950 sm:text-[40px] lg:text-heading-m">
+          <div className="flex w-full flex-col gap-8 xl:w-[580px] xl:gap-10">
+            <h2 className="max-w-[391px] font-poppins text-[32px] leading-[1.2] font-semibold tracking-[-0.01em] text-gray-950 sm:text-[40px] xl:text-heading-m">
               Create &amp; Manage Courses Easily.
             </h2>
             <p className="max-w-[574px] text-body-m leading-[1.6] text-gray-700 sm:text-body-l">

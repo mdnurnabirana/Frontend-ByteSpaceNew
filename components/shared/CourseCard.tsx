@@ -15,11 +15,11 @@ export default function CourseCard({ title, image, featured = false }: CourseCar
     <div className="w-full max-w-[373px] rounded-3xl border border-gray-200 bg-white p-[15px] pb-5">
       <div className="relative h-[195px] overflow-hidden rounded-xl bg-[#443131]">
         <Image src={image} alt={title} fill sizes="341px" className="object-cover" />
-        <div className="absolute right-3 bottom-[19px] left-3 flex gap-3">
+        <div className="absolute right-3 bottom-[19px] left-3 flex gap-2 sm:gap-3">
           {details.map((detail) => (
             <span
               key={detail}
-              className={`rounded-3xl bg-smoke/60 px-3 py-1.5 text-body-xs font-medium whitespace-nowrap text-graphite backdrop-blur-[8px] ${featured ? "leading-5" : "leading-[1.2]"}`}
+              className={`rounded-3xl bg-smoke/60 px-2 py-1.5 sm:px-3 text-body-xs font-medium whitespace-nowrap text-graphite backdrop-blur-[8px] ${featured ? "leading-5" : "leading-[1.2]"}`}
             >
               {detail}
             </span>

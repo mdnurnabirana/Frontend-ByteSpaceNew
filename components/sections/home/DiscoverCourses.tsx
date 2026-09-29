@@ -47,7 +47,7 @@ export default function DiscoverCourses() {
           ))}
         </div>
 
-        <div className="mt-12 grid justify-items-center gap-10 md:grid-cols-2 lg:mt-[77px] xl:grid-cols-3">
+        <div className="mt-12 grid justify-items-center gap-6 md:grid-cols-2 lg:mt-[77px] lg:gap-10 xl:grid-cols-3">
           {courses.map((course) => (
             <CourseCard key={course.title} title={course.title} image={course.image} />
           ))}

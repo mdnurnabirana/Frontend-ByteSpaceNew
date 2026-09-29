@@ -6,10 +6,10 @@ import { footerColumns, legalLinks } from "@/constants/footer";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white pt-16 pb-12 lg:pt-[70px]">
+    <footer className="border-t border-gray-200 bg-white pt-16 pb-12 xl:pt-[70px]">
       <Container>
-        <div className="flex flex-col gap-12 lg:flex-row lg:gap-[92px]">
-          <div className="flex flex-col gap-10 lg:w-[528px] lg:shrink-0 lg:gap-[45px]">
+        <div className="flex flex-col gap-12 xl:flex-row xl:gap-[92px]">
+          <div className="flex flex-col gap-10 xl:w-[528px] xl:shrink-0 xl:gap-[45px]">
             <div className="flex flex-col gap-4">
               <Logo dark />
               <p className="text-body-s leading-[1.6] text-gray-950">
@@ -33,9 +33,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:flex">
+          <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 xl:flex">
             {footerColumns.map((column, index) => (
-              <div key={index} className="flex flex-col gap-6 lg:w-[167px]">
+              <div key={index} className="flex flex-col gap-6 xl:w-[167px]">
                 {column.title && (
                   <h4 className="text-body-m leading-6 text-black">{column.title}</h4>
                 )}
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-6 border-t border-gray-200 pt-[22px] sm:flex-row sm:justify-between lg:mt-[130px]">
+        <div className="mt-16 flex flex-col gap-6 border-t border-gray-200 pt-[22px] sm:flex-row sm:justify-between xl:mt-[130px]">
           <p className="text-body-xs leading-[1.6] text-gray-950">
             @ 2023 ByteSpace. All rights reserved.
           </p>
