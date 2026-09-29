@@ -16,3 +16,9 @@ export const ctaOrnaments = [
   { src: "/images/ornaments/torus-lime.png", left: 16, top: 298, width: 346, height: 344 },
   { src: "/images/ornaments/cylinder-gray.png", left: 1222, top: 5, width: 374, height: 372 },
 ];
+
+export const authOrnaments = [
+  { src: "/images/ornaments/zigzag-gray.png", left: 471, top: 626, width: 177, height: 176 },
+  { src: "/images/ornaments/torus-lime.png", left: 149, top: 320, width: 147, height: 146 },
+  { src: "/images/ornaments/pyramid-lime.png", left: 95, top: 702, width: 190, height: 189 },
+];
