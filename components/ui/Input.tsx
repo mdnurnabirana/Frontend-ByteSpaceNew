@@ -19,7 +19,7 @@ export default function Input({
 }: InputProps) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={name} className="text-body-s leading-[1.2] font-medium text-gray-950">
+      <label htmlFor={name} className="text-body-s leading-[17px] font-medium text-gray-950">
         {label}
       </label>
       <input
